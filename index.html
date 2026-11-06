@@ -172,14 +172,39 @@ font-size: 20px; font-weight: 700; cursor: pointer; display: flex; justify-conte
       <h3>Рассчитайте свой доход</h3>
       <label for="city">Ваш город</label>
       <select id="city">
+        <!-- Высокооплачиваемые города -->
         <option value="vladivostok">Владивосток</option>
-        <option value="khabarovsk">Хабаровск</option>
-        <option value="tyumen">Тюмень</option>
+        <option value="moscow">Москва</option>
+        <option value="spb">Санкт-Петербург</option>
+        <option value="kaliningrad">Калининград</option>
+        <option value="kolpino">Колпино</option>
+        <option value="bataysk">Батайск</option>
+        <option value="vladikavkaz">Владикавказ</option>
+        <option value="irkutsk">Иркутск</option>
+        <option value="kazan">Казань</option>
+        <option value="krasnoe_selo">Красное Село(ЛО)</option>
+        <option value="novocherkassk">Новочеркасск</option>
+        <option value="rostov">Ростов-на-Дону</option>
         <option value="sochi">Сочи</option>
+
+        <!-- Остальные крупные города -->
+        <option value="ekaterinburg">Екатеринбург</option>
+        <option value="novosibirsk">Новосибирск</option>
+        <option value="nizhny">Нижний Новгород</option>
+        <option value="chelyabinsk">Челябинск</option>
+        <option value="samara">Самара</option>
+        <option value="omsk">Омск</option>
+        <option value="ufa">Уфа</option>
+        <option value="krasnoyarsk">Красноярск</option>
+        <option value="voronezh">Воронеж</option>
+        <option value="perm">Пермь</option>
+        <option value="volgograd">Волгоград</option>
+        <option value="krasnodar">Краснодар</option>
+        <option value="adler">Адлер</option>
+        <option value="tyumen">Тюмень</option>
         <option value="saratov">Саратов</option>
         <option value="tomsk">Томск</option>
         <option value="izhevsk">Ижевск</option>
-        <option value="kaliningrad">Калининград</option>
         <option value="barnaul">Барнаул</option>
         <option value="belgorod">Белгород</option>
         <option value="kursk">Курск</option>
@@ -187,7 +212,6 @@ font-size: 20px; font-weight: 700; cursor: pointer; display: flex; justify-conte
         <option value="murmansk">Мурманск</option>
         <option value="arkhangelsk">Архангельск</option>
         <option value="astrakhan">Астрахань</option>
-        <option value="irkutsk">Иркутск</option>
         <option value="yakutsk">Якутск</option>
         <option value="chita">Чита</option>
         <option value="ulyanovsk">Ульяновск</option>
@@ -203,6 +227,15 @@ font-size: 20px; font-weight: 700; cursor: pointer; display: flex; justify-conte
         <option value="kirov">Киров</option>
         <option value="kemerovo">Кемерово</option>
         <option value="surgut">Сургут</option>
+        <option value="vladimir">Владимир</option>
+        <option value="kaluga">Калуга</option>
+        <option value="naberezhnye_chelny">Набережные Челны</option>
+        <option value="magnitogorsk">Магнитогорск</option>
+        <option value="taganrog">Таганрог</option>
+        <option value="novorossiysk">Новороссийск</option>
+        <option value="abakan">Абакан</option>
+        <option value="bryansk">Брянск</option>
+      </select>
 Яндекс Еда + Маркет Деливери - Стань курьером по доставке Еды у партнеров сервиса
 Яндекс Еда + Маркет Деливери - Стань курьером по доставке Еды у партнеров сервиса
 reg.eda.yandex.ru
@@ -386,32 +419,22 @@ class="ad-label">Реклама. ООО «[Укажи название рекл�
 
 <script>
   const baseIncome = {
-    // 1. Самые высокие ставки (Москва, СПб, Владивосток, Хабаровск)
-    moscow: 85000, spb: 85000, vladivostok: 85000, khabarovsk: 85000,
+    // Топовые города (твой список)
+    vladivostok: 95000, moscow: 90000, spb: 90000, kaliningrad: 80000,
+    kolpino: 75000, bataysk: 75000, vladikavkaz: 75000, irkutsk: 75000, 
+    kazan: 75000, krasnoe_selo: 75000, novocherkassk: 75000, rostov: 75000, sochi: 75000,
     
-    // 2. Крупные миллионники (Екатеринбург, Казань, Новосибирск, Самара и др.)
-    ekaterinburg: 65000, kazan: 65000, novosibirsk: 65000, samara: 65000,
-    krasnodar: 65000, rostov: 65000, ufa: 65000, chelyabinsk: 65000,
-    nizhny: 65000, krasnoyarsk: 65000, voronezh: 65000, perm: 65000,
-    volgograd: 65000, omsk: 65000, tyumen: 65000, sochi: 65000,
-    saratov: 65000, tomsk: 65000, izhevsk: 65000, kaliningrad: 65000,
-
-    // 3. Города со средними ставками (Нижний Новгород, Краснодар, Волгоград и др. по данным Курьерос)
-    // (Внимание: в некоторых источниках они могут быть выше, но берем усредненный уровень)
-    nizhny_tagil: 55000, shakhty: 55000, kislovodsk: 55000,
-    krasnodar_alt: 55000, volgograd_alt: 55000,
-    
-    // 4. Другие крупные города из списков (Абакан, Адлер, Барнаул, Белгород и т.д.)
-    abakan: 55000, adler: 64000, barnaul: 55000, belgorod: 55000,
-    bryansk: 55000, vladimir: 55000, vologda: 55000, ivanovo: 55000,
-    kaluga: 55000, kursk: 55000, lipetsk: 55000, murmansk: 55000,
-    arkhangelsk: 55000, astrakhan: 55000, irkutsk: 55000, yakutsk: 55000,
-    yuzhno_sakhalinsk: 55000, petropavlovsk: 55000, chita: 55000,
-    ulyanovsk: 55000, yaroslavl: 55000, tver: 55000, tula: 55000,
-    smolensk: 55000, cheboksary: 55000, penza: 55000, ryazan: 55000,
-    stavropol: 55000, naberezhnye_chelny: 55000, orenburg: 55000,
-    kirov: 55000, tomsk_alt: 55000, kemerovo: 55000, novosibirsk_alt: 55000,
-    kopeysk: 55000, magnitogorsk: 55000, surgut: 55000, nizhnevartovsk: 55000
+    // Крупные города
+    ekaterinburg: 65000, novosibirsk: 65000, nizhny: 65000, chelyabinsk: 65000,
+    samara: 65000, omsk: 65000, ufa: 65000, krasnoyarsk: 65000, voronezh: 65000,
+    perm: 65000, volgograd: 65000, krasnodar: 65000, adler: 65000, tyumen: 65000,
+    saratov: 65000, tomsk: 65000, izhevsk: 65000, barnaul: 65000, belgorod: 65000,
+    kursk: 65000, lipetsk: 65000, murmansk: 65000, arkhangelsk: 65000, astrakhan: 65000,
+    yakutsk: 65000, chita: 65000, ulyanovsk: 65000, yaroslavl: 65000, tver: 65000,
+    tula: 65000, smolensk: 65000, cheboksary: 65000, penza: 65000, ryazan: 65000,
+    stavropol: 65000, orenburg: 65000, kirov: 65000, kemerovo: 65000, surgut: 65000,
+    vladimir: 65000, kaluga: 65000, naberezhnye_chelny: 65000, magnitogorsk: 65000,
+    taganrog: 65000, novorossiysk: 65000, abakan: 65000, bryansk: 65000
   };
 
   const multipliers = { foot: 1, bike: 1.35, auto: 1.60 };
