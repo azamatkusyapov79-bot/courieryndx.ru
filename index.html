@@ -186,12 +186,19 @@ font-size: 20px; font-weight: 700; cursor: pointer; display: flex; justify-conte
     <div class="calc">
       <h3>Рассчитайте свой доход</h3>
       <label for="city">Ваш город</label>
-      <select id="city">
+            <select id="city">
+        <!-- Топовые и высокооплачиваемые -->
         <option value="vladivostok">Владивосток</option>
         <option value="moscow">Москва</option>
         <option value="spb">Санкт-Петербург</option>
+        <option value="khabarovsk">Хабаровск</option>
         <option value="kaliningrad">Калининград</option>
+        <option value="minsk">Минск</option>
+        
+        <!-- Твой список и крупные города -->
         <option value="kolpino">Колпино</option>
+        <option value="adler">Адлер</option>
+        <option value="barnaul">Барнаул</option>
         <option value="bataysk">Батайск</option>
         <option value="vladikavkaz">Владикавказ</option>
         <option value="irkutsk">Иркутск</option>
@@ -200,53 +207,168 @@ font-size: 20px; font-weight: 700; cursor: pointer; display: flex; justify-conte
         <option value="novocherkassk">Новочеркасск</option>
         <option value="rostov">Ростов-на-Дону</option>
         <option value="sochi">Сочи</option>
-        <option value="ekaterinburg">Екатеринбург</option>
-        <option value="novosibirsk">Новосибирск</option>
-        <option value="nizhny">Нижний Новгород</option>
-        <option value="chelyabinsk">Челябинск</option>
-        <option value="samara">Самара</option>
-        <option value="omsk">Омск</option>
-        <option value="ufa">Уфа</option>
-        <option value="krasnoyarsk">Красноярск</option>
         <option value="voronezh">Воронеж</option>
-        <option value="perm">Пермь</option>
-        <option value="volgograd">Волгоград</option>
-        <option value="krasnodar">Краснодар</option>
-        <option value="adler">Адлер</option>
-        <option value="tyumen">Тюмень</option>
-        <option value="saratov">Саратов</option>
-        <option value="tomsk">Томск</option>
-        <option value="izhevsk">Ижевск</option>
-        <option value="barnaul">Барнаул</option>
-        <option value="belgorod">Белгород</option>
-        <option value="kursk">Курск</option>
-        <option value="lipetsk">Липецк</option>
-        <option value="murmansk">Мурманск</option>
-        <option value="arkhangelsk">Архангельск</option>
+        <option value="gatcina">Гатчина</option>
+        <option value="ekaterinburg">Екатеринбург</option>
+        <option value="nalchik">Нальчик</option>
+        <option value="nizhny">Нижний Новгород</option>
+        <option value="severodvinsk">Северодвинск</option>
+        <option value="ussuriysk">Уссурийск</option>
+        <option value="essentuki">Ессентуки</option>
+        <option value="armavir">Армавир</option>
         <option value="astrakhan">Астрахань</option>
-        <option value="yakutsk">Якутск</option>
-        <option value="chita">Чита</option>
-        <option value="ulyanovsk">Ульяновск</option>
-        <option value="yaroslavl">Ярославль</option>
-        <option value="tver">Тверь</option>
-        <option value="tula">Тула</option>
-        <option value="smolensk">Смоленск</option>
-        <option value="cheboksary">Чебоксары</option>
-        <option value="penza">Пенза</option>
-        <option value="ryazan">Рязань</option>
-        <option value="stavropol">Ставрополь</option>
-        <option value="orenburg">Оренбург</option>
-        <option value="kirov">Киров</option>
+        <option value="vyborg">Выборг</option>
+        <option value="gelendzhik">Геленджик</option>
+        <option value="dzerzhinsk">Дзержинск</option>
+        <option value="elabuga">Елабуга</option>
         <option value="kemerovo">Кемерово</option>
-        <option value="surgut">Сургут</option>
-        <option value="vladimir">Владимир</option>
-        <option value="kaluga">Калуга</option>
+        <option value="kingisepp">Кингисепп</option>
+        <option value="kovrov">Ковров</option>
+        <option value="krasnodar">Краснодар</option>
+        <option value="lipetsk">Липецк</option>
+        <option value="lytkarino">Лыткарино</option>
+        <option value="murmansk">Мурманск</option>
         <option value="naberezhnye_chelny">Набережные Челны</option>
-        <option value="magnitogorsk">Магнитогорск</option>
+        <option value="nizhnekamsk">Нижнекамск</option>
+        <option value="novomoskovsk">Новомосковск</option>
+        <option value="novy_urengoy">Новый Уренгой</option>
+        <option value="noginsk">Ногинск</option>
+        <option value="obninsk">Обнинск</option>
+        <option value="penza">Пенза</option>
+        <option value="perm">Пермь</option>
+        <option value="petrozavodsk">Петрозаводск</option>
+        <option value="pushkin">Пушкин</option>
         <option value="taganrog">Таганрог</option>
-        <option value="novorossiysk">Новороссийск</option>
-        <option value="abakan">Абакан</option>
+        <option value="tomsk">Томск</option>
+        <option value="tyumen">Тюмень</option>
+        <option value="ulan_ude">Улан-Удэ</option>
+        <option value="ufa">Уфа</option>
+        <option value="blagoveshchensk">Благовещенск</option>
+        <option value="bronnicy">Бронницы</option>
         <option value="bryansk">Брянск</option>
+        <option value="volgograd">Волгоград</option>
+        <option value="volzhsky">Волжский</option>
+        <option value="vsevolozhsk">Всеволожск</option>
+        <option value="domodedovo">Домодедово</option>
+        <option value="dubna">Дубна</option>
+        <option value="zheleznodorozhny">Железнодорожный</option>
+        <option value="ivanteevka">Ивантеевка</option>
+        <option value="izhevsk">Ижевск</option>
+        <option value="kamyshin">Камышин</option>
+        <option value="krasnoyarsk">Красноярск</option>
+        <option value="magnitogorsk">Магнитогорск</option>
+        <option value="novokuznetsk">Новокузнецк</option>
+        <option value="omsk">Омск</option>
+        <option value="orenburg">Оренбург</option>
+        <option value="pskov">Псков</option>
+        <option value="pyatigorsk">Пятигорск</option>
+        <option value="saransk">Саранск</option>
+        <option value="smolensk">Смоленск</option>
+        <option value="stavropol">Ставрополь</option>
+        <option value="surgut">Сургут</option>
+        <option value="tver">Тверь</option>
+        <option value="tobolsk">Тобольск</option>
+        <option value="tolyatti">Тольятти</option>
+        <option value="tula">Тула</option>
+        <option value="ulyanovsk">Ульяновск</option>
+        <option value="himki">Химки</option>
+        <option value="shahty">Шахты</option>
+        <option value="shcherbinka">Щербинка</option>
+        <option value="abakan">Абакан</option>
+        <option value="almetyevsk">Альметьевск</option>
+        <option value="aprelevka">Апрелевка</option>
+        <option value="arkhangelsk">Архангельск</option>
+        <option value="balakovo">Балаково</option>
+        <option value="berdsk">Бердск</option>
+        <option value="veliky_novgorod">Великий Новгород</option>
+        <option value="dmitrov">Дмитров</option>
+        <option value="egoryevsk">Егорьевск</option>
+        <option value="zvenigorod">Звенигород</option>
+        <option value="zelenograd">Зеленоград</option>
+        <option value="ivanovo">Иваново</option>
+        <option value="yoshkar_ola">Йошкар-Ола</option>
+        <option value="kirov">Киров</option>
+        <option value="klin">Клин</option>
+        <option value="kolomna">Коломна</option>
+        <option value="komsomolsk">Комсомольск-на-Амуре</option>
+        <option value="kotelniki">Котельники</option>
+        <option value="kursk">Курск</option>
+        <option value="naro_fominsk">Наро-Фоминск</option>
+        <option value="nizhnevartovsk">Нижневартовск</option>
+        <option value="novorossiysk">Новороссийск</option>
+        <option value="novosibirsk">Новосибирск</option>
+        <option value="ryazan">Рязань</option>
+        <option value="samara">Самара</option>
+        <option value="saratov">Саратов</option>
+        <option value="serpuhov">Серпухов</option>
+        <option value="solnechnogorsk">Солнечногорск</option>
+        <option value="troitsk">Троицк</option>
+        <option value="fryazino">Фрязино</option>
+        <option value="hanty_mansiysk">Ханты-Мансийск</option>
+        <option value="cheboksary">Чебоксары</option>
+        <option value="chelyabinsk">Челябинск</option>
+        <option value="cherepovets">Череповец</option>
+        <option value="shchelkovo">Щелково</option>
+        <option value="elektrostal">Электросталь</option>
+        <option value="yaroslavl">Ярославль</option>
+        <option value="rybinsk">Рыбинск</option>
+        <option value="petergof">Петергоф</option>
+        <option value="anapa">Анапа</option>
+        <option value="vladimir">Владимир</option>
+        <option value="volgodonsk">Волгодонск</option>
+        <option value="zhukovsky">Жуковский</option>
+        <option value="zelenodolsk">Зеленодольск</option>
+        <option value="kaluga">Калуга</option>
+        <option value="kislovodsk">Кисловодск</option>
+        <option value="maykop">Майкоп</option>
+        <option value="miass">Миасс</option>
+        <option value="mytishchi">Мытищи</option>
+        <option value="odintsovo">Одинцово</option>
+        <option value="orel">Орел</option>
+        <option value="stupino">Ступино</option>
+        <option value="syzran">Сызрань</option>
+        <option value="syktyvkar">Сыктывкар</option>
+        <option value="yakutsk">Якутск</option>
+        <option value="vologda">Вологда</option>
+        <option value="kostroma">Кострома</option>
+        <option value="belgorod">Белгород</option>
+        <option value="biysk">Бийск</option>
+        <option value="mineralnye_vody">Минеральные Воды</option>
+        <option value="nizhny_tagil">Нижний Тагил</option>
+        <option value="stary_oskol">Старый Оскол</option>
+        <option value="sterlitamak">Стерлитамак</option>
+        <option value="tambov">Тамбов</option>
+        <option value="yeysk">Ейск</option>
+        <option value="nakhodka">Находка</option>
+        <option value="kurgan">Курган</option>
+        <option value="balashiha">Балашиха</option>
+        <option value="vidnoe">Видное</option>
+        <option value="voskresensk">Воскресенск</option>
+        <option value="dzerzhinsky">Дзержинский</option>
+        <option value="dolgoprudny">Долгопрудный</option>
+        <option value="istra">Истра</option>
+        <option value="korolev">Королёв</option>
+        <option value="krasnaya_polyana">Красная Поляна</option>
+        <option value="krasnogorsk">Красногорск</option>
+        <option value="lobnya">Лобня</option>
+        <option value="lyubertsy">Люберцы</option>
+        <option value="mozhaysk">Можайск</option>
+        <option value="murom">Муром</option>
+        <option value="nagabino">Нахабино</option>
+        <option value="nefteyugansk">Нефтеюганск</option>
+        <option value="orekhovo_zuevo">Орехово-Зуево</option>
+        <option value="pavlovsky_posad">Павловский Посад</option>
+        <option value="podolsk">Подольск</option>
+        <option value="pushkino">Пушкино</option>
+        <option value="ramenskoe">Раменское</option>
+        <option value="reutov">Реутов</option>
+        <option value="sergiev_posad">Сергиев Посад</option>
+        <option value="sosnovy_bor">Сосновый Бор</option>
+        <option value="chekhov">Чехов</option>
+        <option value="chita">Чита</option>
+        <option value="mahachkala">Махачкала</option>
+        <option value="neftekamsk">Нефтекамск</option>
+        <option value="engels">Энгельс</option>
       </select>
 
       <label>Тип курьера</label>
@@ -415,23 +537,50 @@ class="ad-label">Реклама. ООО «[Укажи название рекл�
 <a href="#" class="up-btn" id="upBtn">↑</a>
 
 <script>
-  const baseIncome = {
-    // Топовые города (твой список)
-    vladivostok: 95000, moscow: 90000, spb: 90000, kaliningrad: 80000,
-    kolpino: 75000, bataysk: 75000, vladikavkaz: 75000, irkutsk: 75000, 
-    kazan: 75000, krasnoe_selo: 75000, novocherkassk: 75000, rostov: 75000, sochi: 75000,
+    const baseIncome = {
+    // Уровень 1: Максимальные ставки (Москва, СПб, Владивосток, Минск)
+    moscow: 95000, spb: 90000, vladivostok: 95000, minsk: 90000, khabarovsk: 85000,
     
-    // Крупные города
-    ekaterinburg: 65000, novosibirsk: 65000, nizhny: 65000, chelyabinsk: 65000,
-    samara: 65000, omsk: 65000, ufa: 65000, krasnoyarsk: 65000, voronezh: 65000,
-    perm: 65000, volgograd: 65000, krasnodar: 65000, adler: 65000, tyumen: 65000,
-    saratov: 65000, tomsk: 65000, izhevsk: 65000, barnaul: 65000, belgorod: 65000,
-    kursk: 65000, lipetsk: 65000, murmansk: 65000, arkhangelsk: 65000, astrakhan: 65000,
-    yakutsk: 65000, chita: 65000, ulyanovsk: 65000, yaroslavl: 65000, tver: 65000,
-    tula: 65000, smolensk: 65000, cheboksary: 65000, penza: 65000, ryazan: 65000,
-    stavropol: 65000, orenburg: 65000, kirov: 65000, kemerovo: 65000, surgut: 65000,
-    vladimir: 65000, kaluga: 65000, naberezhnye_chelny: 65000, magnitogorsk: 65000,
-    taganrog: 65000, novorossiysk: 65000, abakan: 65000, bryansk: 65000
+    // Уровень 2: Высокие ставки (Топовые города из списка и крупные миллионники)
+    kaliningrad: 80000, kolpino: 75000, adler: 75000, bataysk: 75000, vladikavkaz: 75000,
+    irkutsk: 75000, kazan: 75000, krasnoe_selo: 75000, novocherkassk: 75000, rostov: 75000,
+    sochi: 75000, voronezh: 75000, gatcina: 75000, ekaterinburg: 75000, nalchik: 75000,
+    nizhny: 75000, severodvinsk: 75000, ussuriysk: 75000, essentuki: 75000, armavir: 75000,
+    astrakhan: 75000, vyborg: 75000, gelendzhik: 75000, dzerzhinsk: 75000, elabuga: 75000,
+    kemerovo: 75000, kingisepp: 75000, kovrov: 75000, krasnodar: 75000, lipetsk: 75000,
+    lytkarino: 75000, murmansk: 75000, naberezhnye_chelny: 75000, nizhnekamsk: 75000,
+    novomoskovsk: 75000, novy_urengoy: 75000, noginsk: 75000, obninsk: 75000, penza: 75000,
+    perm: 75000, petrozavodsk: 75000, pushkin: 75000, taganrog: 75000, tomsk: 75000,
+    tyumen: 75000, ulan_ude: 75000, ufa: 75000, blagoveshchensk: 75000, bronnicy: 75000,
+    bryansk: 75000, volgograd: 75000, volzhsky: 75000, vsevolozhsk: 75000, domodedovo: 75000,
+    dubna: 75000, zheleznodorozhny: 75000, ivanteevka: 75000, izhevsk: 75000, kamyshin: 75000,
+    krasnoyarsk: 75000, magnitogorsk: 75000, novokuznetsk: 75000, omsk: 75000, orenburg: 75000,
+    pskov: 75000, pyatigorsk: 75000, saransk: 75000, smolensk: 75000, stavropol: 75000,
+    surgut: 75000, tver: 75000, tobolsk: 75000, tolyatti: 75000, tula: 75000,
+    ulyanovsk: 75000, himki: 75000, shahty: 75000, shcherbinka: 75000,
+
+    // Уровень 3: Средние ставки
+    abakan: 65000, almetyevsk: 65000, aprelevka: 65000, arkhangelsk: 65000, balakovo: 65000,
+    berdsk: 65000, veliky_novgorod: 65000, dmitrov: 65000, egoryevsk: 65000, zvenigorod: 65000,
+    zelenograd: 65000, ivanovo: 65000, yoshkar_ola: 65000, kirov: 65000, klin: 65000,
+    kolomna: 65000, komsomolsk: 65000, kotelniki: 65000, kursk: 65000, naro_fominsk: 65000,
+    nizhnevartovsk: 65000, novorossiysk: 65000, novosibirsk: 65000, ryazan: 65000,
+    samara: 65000, saratov: 65000, serpuhov: 65000, solnechnogorsk: 65000, troitsk: 65000,
+    fryazino: 65000, hanty_mansiysk: 65000, cheboksary: 65000, chelyabinsk: 65000,
+    cherepovets: 65000, shchelkovo: 65000, elektrostal: 65000, yaroslavl: 65000,
+    rybinsk: 65000, petergof: 65000, anapa: 65000, vladimir: 65000, volgodonsk: 65000,
+    zhukovsky: 65000, zelenodolsk: 65000, kaluga: 65000, kislovodsk: 65000, maykop: 65000,
+    miass: 65000, mytischi: 65000, odintsovo: 65000, orel: 65000, stupino: 65000,
+    syzran: 65000, syktyvkar: 65000, yakutsk: 65000, vologda: 65000, kostroma: 65000,
+    belgorod: 65000, biysk: 65000, mineralnye_vody: 65000, nizhny_tagil: 65000,
+    stary_oskol: 65000, sterlitamak: 65000, tambov: 65000, yeysk: 65000, nakhodka: 65000,
+    kurgan: 65000, balashiha: 65000, vidnoe: 65000, voskresensk: 65000, dzerzhinsky: 65000,
+    dolgoprudny: 65000, istra: 65000, korolev: 65000, krasnaya_polyana: 65000,
+    krasnogorsk: 65000, lobnya: 65000, lyubertsy: 65000, mozhaysk: 65000, murom: 65000,
+    nagabino: 65000, nefteyugansk: 65000, orekhovo_zuevo: 65000, pavlovsky_posad: 65000,
+    podolsk: 65000, pushkino: 65000, ramenskoe: 65000, reutov: 65000, sergiev_posad: 65000,
+    sosnovy_bor: 65000, chekhov: 65000, chita: 65000, mahachkala: 65000, neftekamsk: 65000,
+    engels: 65000
   };
 
   const multipliers = { foot: 1, bike: 1.35, auto: 1.60 };
