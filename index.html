@@ -537,50 +537,51 @@ class="ad-label">Реклама. ООО «[Укажи название рекл�
 <a href="#" class="up-btn" id="upBtn">↑</a>
 
 <script>
-    const baseIncome = {
-    // Уровень 1: Максимальные ставки (Москва, СПб, Владивосток, Минск)
-    moscow: 95000, spb: 90000, vladivostok: 95000, minsk: 90000, khabarovsk: 85000,
+      const baseIncome = {
+    // Топовые города по ставкам (Высокий доход)
+    vladivostok: 115000, moscow: 110000, spb: 110000, krasnoyarsk: 95000, ekaterinburg: 95000,
+    khabarovsk: 90000, kaliningrad: 90000, kolpino: 90000, minsk: 90000,
     
-    // Уровень 2: Высокие ставки (Топовые города из списка и крупные миллионники)
-    kaliningrad: 80000, kolpino: 75000, adler: 75000, bataysk: 75000, vladikavkaz: 75000,
-    irkutsk: 75000, kazan: 75000, krasnoe_selo: 75000, novocherkassk: 75000, rostov: 75000,
-    sochi: 75000, voronezh: 75000, gatcina: 75000, ekaterinburg: 75000, nalchik: 75000,
-    nizhny: 75000, severodvinsk: 75000, ussuriysk: 75000, essentuki: 75000, armavir: 75000,
-    astrakhan: 75000, vyborg: 75000, gelendzhik: 75000, dzerzhinsk: 75000, elabuga: 75000,
-    kemerovo: 75000, kingisepp: 75000, kovrov: 75000, krasnodar: 75000, lipetsk: 75000,
-    lytkarino: 75000, murmansk: 75000, naberezhnye_chelny: 75000, nizhnekamsk: 75000,
-    novomoskovsk: 75000, novy_urengoy: 75000, noginsk: 75000, obninsk: 75000, penza: 75000,
-    perm: 75000, petrozavodsk: 75000, pushkin: 75000, taganrog: 75000, tomsk: 75000,
-    tyumen: 75000, ulan_ude: 75000, ufa: 75000, blagoveshchensk: 75000, bronnicy: 75000,
-    bryansk: 75000, volgograd: 75000, volzhsky: 75000, vsevolozhsk: 75000, domodedovo: 75000,
-    dubna: 75000, zheleznodorozhny: 75000, ivanteevka: 75000, izhevsk: 75000, kamyshin: 75000,
-    krasnoyarsk: 75000, magnitogorsk: 75000, novokuznetsk: 75000, omsk: 75000, orenburg: 75000,
-    pskov: 75000, pyatigorsk: 75000, saransk: 75000, smolensk: 75000, stavropol: 75000,
-    surgut: 75000, tver: 75000, tobolsk: 75000, tolyatti: 75000, tula: 75000,
-    ulyanovsk: 75000, himki: 75000, shahty: 75000, shcherbinka: 75000,
+    // Высокие ставки (75 000 - 85 000 ₽)
+    adler: 85000, barnaul: 85000, bataysk: 85000, vladikavkaz: 85000, irkutsk: 85000,
+    kazan: 85000, krasnoe_selo: 85000, novocherkassk: 85000, rostov: 85000, sochi: 85000,
+    voronezh: 85000, gatcina: 85000, nalchik: 85000, nizhny: 85000, severodvinsk: 85000,
+    ussuriysk: 85000, essentuki: 85000, armavir: 85000, astrakhan: 85000, vyborg: 85000,
+    gelendzhik: 85000, dzerzhinsk: 85000, elabuga: 85000, kemerovo: 85000, kingisepp: 85000,
+    kovrov: 85000, krasnodar: 85000, lipetsk: 85000, lytkarino: 85000, murmansk: 85000,
+    naberezhnye_chelny: 85000, nizhnekamsk: 85000, novomoskovsk: 85000, novy_urengoy: 85000,
+    noginsk: 85000, obninsk: 85000, penza: 85000, perm: 85000, petrozavodsk: 85000,
+    pushkin: 85000, taganrog: 85000, tomsk: 85000, tyumen: 85000, ulan_ude: 85000,
+    ufa: 85000, blagoveshchensk: 85000, bronnicy: 85000, bryansk: 85000, volgograd: 85000,
+    volzhsky: 85000, vsevolozhsk: 85000, domodedovo: 85000, dubna: 85000, zheleznodorozhny: 85000,
+    ivanteevka: 85000, izhevsk: 85000, kamyshin: 85000, magnitogorsk: 85000, novokuznetsk: 85000,
+    omsk: 85000, orenburg: 85000, pskov: 85000, pyatigorsk: 85000, saransk: 85000,
+    smolensk: 85000, stavropol: 85000, surgut: 85000, tver: 85000, tobolsk: 85000,
+    tolyatti: 85000, tula: 85000, ulyanovsk: 85000, himki: 85000, shahty: 85000,
+    shcherbinka: 85000,
 
-    // Уровень 3: Средние ставки
-    abakan: 65000, almetyevsk: 65000, aprelevka: 65000, arkhangelsk: 65000, balakovo: 65000,
-    berdsk: 65000, veliky_novgorod: 65000, dmitrov: 65000, egoryevsk: 65000, zvenigorod: 65000,
-    zelenograd: 65000, ivanovo: 65000, yoshkar_ola: 65000, kirov: 65000, klin: 65000,
-    kolomna: 65000, komsomolsk: 65000, kotelniki: 65000, kursk: 65000, naro_fominsk: 65000,
-    nizhnevartovsk: 65000, novorossiysk: 65000, novosibirsk: 65000, ryazan: 65000,
-    samara: 65000, saratov: 65000, serpuhov: 65000, solnechnogorsk: 65000, troitsk: 65000,
-    fryazino: 65000, hanty_mansiysk: 65000, cheboksary: 65000, chelyabinsk: 65000,
-    cherepovets: 65000, shchelkovo: 65000, elektrostal: 65000, yaroslavl: 65000,
-    rybinsk: 65000, petergof: 65000, anapa: 65000, vladimir: 65000, volgodonsk: 65000,
-    zhukovsky: 65000, zelenodolsk: 65000, kaluga: 65000, kislovodsk: 65000, maykop: 65000,
-    miass: 65000, mytischi: 65000, odintsovo: 65000, orel: 65000, stupino: 65000,
-    syzran: 65000, syktyvkar: 65000, yakutsk: 65000, vologda: 65000, kostroma: 65000,
-    belgorod: 65000, biysk: 65000, mineralnye_vody: 65000, nizhny_tagil: 65000,
-    stary_oskol: 65000, sterlitamak: 65000, tambov: 65000, yeysk: 65000, nakhodka: 65000,
-    kurgan: 65000, balashiha: 65000, vidnoe: 65000, voskresensk: 65000, dzerzhinsky: 65000,
-    dolgoprudny: 65000, istra: 65000, korolev: 65000, krasnaya_polyana: 65000,
-    krasnogorsk: 65000, lobnya: 65000, lyubertsy: 65000, mozhaysk: 65000, murom: 65000,
-    nagabino: 65000, nefteyugansk: 65000, orekhovo_zuevo: 65000, pavlovsky_posad: 65000,
-    podolsk: 65000, pushkino: 65000, ramenskoe: 65000, reutov: 65000, sergiev_posad: 65000,
-    sosnovy_bor: 65000, chekhov: 65000, chita: 65000, mahachkala: 65000, neftekamsk: 65000,
-    engels: 65000
+    // Средние ставки (65 000 - 75 000 ₽) - города, где доход чуть ниже
+    abakan: 70000, almetyevsk: 70000, aprelevka: 70000, arkhangelsk: 70000, balakovo: 70000,
+    berdsk: 70000, veliky_novgorod: 70000, dmitrov: 70000, egoryevsk: 70000, zvenigorod: 70000,
+    zelenograd: 70000, ivanovo: 70000, yoshkar_ola: 70000, kirov: 70000, klin: 70000,
+    kolomna: 70000, komsomolsk: 70000, kotelniki: 70000, kursk: 70000, naro_fominsk: 70000,
+    nizhnevartovsk: 70000, novorossiysk: 70000, novosibirsk: 70000, ryazan: 70000,
+    samara: 70000, saratov: 70000, serpuhov: 70000, solnechnogorsk: 70000, troitsk: 70000,
+    fryazino: 70000, hanty_mansiysk: 70000, cheboksary: 70000, chelyabinsk: 70000,
+    cherepovets: 70000, shchelkovo: 70000, elektrostal: 70000, yaroslavl: 70000,
+    rybinsk: 70000, petergof: 70000, anapa: 70000, vladimir: 70000, volgodonsk: 70000,
+    zhukovsky: 70000, zelenodolsk: 70000, kaluga: 70000, kislovodsk: 70000, maykop: 70000,
+    miass: 70000, mytischi: 70000, odintsovo: 70000, orel: 70000, stupino: 70000,
+    syzran: 70000, syktyvkar: 70000, yakutsk: 70000, vologda: 70000, kostroma: 70000,
+    belgorod: 70000, biysk: 70000, mineralnye_vody: 70000, nizhny_tagil: 70000,
+    stary_oskol: 70000, sterlitamak: 70000, tambov: 70000, yeysk: 70000, nakhodka: 70000,
+    kurgan: 70000, balashiha: 70000, vidnoe: 70000, voskresensk: 70000, dzerzhinsky: 70000,
+    dolgoprudny: 70000, istra: 70000, korolev: 70000, krasnaya_polyana: 70000,
+    krasnogorsk: 70000, lobnya: 70000, lyubertsy: 70000, mozhaysk: 70000, murom: 70000,
+    nagabino: 70000, nefteyugansk: 70000, orekhovo_zuevo: 70000, pavlovsky_posad: 70000,
+    podolsk: 70000, pushkino: 70000, ramenskoe: 70000, reutov: 70000, sergiev_posad: 70000,
+    sosnovy_bor: 70000, chekhov: 70000, chita: 70000, mahachkala: 70000, neftekamsk: 70000,
+    engels: 70000
   };
 
   const multipliers = { foot: 1, bike: 1.35, auto: 1.60 };
